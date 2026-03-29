@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 222 47% 11%;
+    --primary: 250 89% 65%;
+    --primary-foreground: 210 40% 98%;
+  }
+
+  body {
+    @apply text-slate-900 font-sans min-h-screen relative overflow-x-hidden;
+    background: linear-gradient(-45deg, #eef2ff, #faf5ff, #f8fafc, #f0fdf4);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
